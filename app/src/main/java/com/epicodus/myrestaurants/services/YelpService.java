@@ -94,6 +94,8 @@
 package com.epicodus.myrestaurants.services;
 
 
+import android.util.Log;
+
 import com.epicodus.myrestaurants.Constants;
 import com.epicodus.myrestaurants.models.Restaurant;
 
@@ -153,6 +155,7 @@ public class YelpService {
                     String website = restaurantJSON.getString("url");
                     double rating = restaurantJSON.getDouble("rating");
                     String imageUrl = restaurantJSON.getString("image_url");
+                    Log.d("IMGURL", imageUrl);
                     double latitude = restaurantJSON.getJSONObject("location")
                             .getJSONObject("coordinate").getDouble("latitude");
                     double longitude = restaurantJSON.getJSONObject("location")
