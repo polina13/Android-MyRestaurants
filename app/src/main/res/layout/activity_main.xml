@@ -10,11 +10,11 @@
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:src="@drawable/background"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true" />
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,6 +27,30 @@
         android:textSize="40sp"
         android:id="@+id/appNameTextView"
         android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/fetch_address_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="fetchAddressButtonHandler"
+        android:layout_above="@+id/longitude_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/location_address_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fetch_address_button"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/appNameTextView" />
 
     <Button
         android:layout_width="match_parent"
@@ -49,5 +73,38 @@
         android:hint="Enter Zip Code"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHECK LOCATION"
+        android:id="@+id/locationButton"
+        android:layout_above="@+id/locationEditText"
+        android:layout_alignRight="@+id/appNameTextView"
+        android:layout_alignEnd="@+id/appNameTextView"
+        android:layout_marginBottom="85dp" />
+
+    <TextView
+        android:id="@+id/latitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:textSize="15sp"
+        android:text="Test"
+        android:layout_above="@+id/locationButton"
+        android:layout_toLeftOf="@+id/locationEditText"
+        android:layout_toStartOf="@+id/locationEditText"
+        android:layout_marginBottom="79dp" />
+
+    <TextView
+        android:id="@+id/longitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:textSize="15sp"
+        android:text="Test2"
+        android:layout_alignTop="@+id/latitude_text"
+        android:layout_alignRight="@+id/locationEditText"
+        android:layout_alignEnd="@+id/locationEditText" />
 
 </RelativeLayout>
